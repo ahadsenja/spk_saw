@@ -33,7 +33,7 @@ class Assessment extends React.Component {
     render() {
         return (
             <div>
-                {}
+                <AssessmentList />
             </div>
         )
     }
