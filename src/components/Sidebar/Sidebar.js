@@ -7,7 +7,7 @@ class Sidebar extends React.Component {
         return (
             <div style={{ position: 'fixed' }}>
                 <Nav className='flex-column'>
-                    <Nav.Link style={{ color: '#ffffff', paddingTop: '20px' }}>Master</Nav.Link>
+                    <Nav.Link style={{ color: '#333333', paddingTop: '20px' }}>Master</Nav.Link>
                 </Nav>
             </div>
         )

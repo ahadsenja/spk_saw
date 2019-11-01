@@ -5,7 +5,7 @@ class NavigationBar extends React.Component {
     render() {
         return (
             <div>
-                <Navbar bg='light'>
+                <Navbar bg='dark' variant='dark'>
                     <Navbar.Brand>SPK-SAW</Navbar.Brand>
                     <Navbar.Toggle aria-controls='basic-navbar-nav' />
                     <Navbar.Collapse id='basic-navbar-nav'>
