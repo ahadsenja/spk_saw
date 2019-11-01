@@ -30,14 +30,39 @@ class Assessment extends React.Component {
         this.setState({ [e.target.name]: e.target.value })
     }
 
+    addAssessment = (event) => {
+        event.preventDefault()
+        const { assessments } = this.state
+        const assessment = {
+            name: this.state.name,
+            address: this.state.address,
+            telp: this.state.telp,
+            u1: this.state.u1,
+            u2: this.state.u2,
+            u3: this.state.u3,
+            u4: this.state.u4,
+        }
+        assessments.push(assessment)
+        this.setState({ assessments })
+        this.toggleAssessmentForm()
+    }
+
     render() {
         return (
             <div>
                 { this.state.showAssessmentForm &&
-                    <AssessmentForm />
+                    <AssessmentForm 
+                        dataState={this.state}
+                        toggleAssessmentForm={this.toggleAssessmentForm} 
+                        addAssessment={this.addAssessment}
+                        handleChange={this.handleChange}
+                    />
                 }
                 { !this.state.showAssessmentForm &&
-                    <AssessmentList toggleAssessmentForm={this.toggleAssessmentForm} />
+                    <AssessmentList
+                        dataState={this.state}
+                        toggleAssessmentForm={this.toggleAssessmentForm} 
+                    />
                 }
             </div>
         )
